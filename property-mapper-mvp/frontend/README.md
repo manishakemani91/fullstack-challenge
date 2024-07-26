@@ -16,35 +16,29 @@ npm install
 create **.env** file in root folder .env
 ```
 VITE_API_URL= url
+```
 
 ## Run / Develop
 
 ```
-
 npm run dev
-
 ```
 
 ## Build
 
 ```
-
 npm run build
-
 ```
 
 ## Preview
 
 ```
-
 npm run preview
-
 ```
 
 ## Lint
 
 ```
-
 npm run lint
 
 ```
