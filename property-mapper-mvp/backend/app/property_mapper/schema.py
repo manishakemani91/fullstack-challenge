@@ -1,9 +1,6 @@
 from pydantic import BaseModel, Field, conint
 from typing import Optional
 
-DESC_EXAMPLE = "The radiance lives on in the Nike Air Force 1 '07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine."
-
-
 class PropertySchema(BaseModel):
 
     full_address: str = Field(None, example="123 Main St")
