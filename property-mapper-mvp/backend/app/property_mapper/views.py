@@ -30,7 +30,6 @@ async def autocomplete(
     column_attr = getattr(Property, field)
     
     try:
-    # Checking if the query is a valid integer or float when field is numeric
         if field in ["estimated_market_value", "building_sq_ft"]:
             
             result = db.query(
@@ -73,8 +72,6 @@ async def autocomplete(
             "results": autocomplete_results,
             "hasMore": has_more
         }
-
-        #return autocomplete_results
 
     except Exception as e:
         logger.error('error occured while fetching list: ',e)
