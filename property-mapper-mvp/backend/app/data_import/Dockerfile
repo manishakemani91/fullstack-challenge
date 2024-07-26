@@ -6,7 +6,7 @@ WORKDIR /app
 ENV PYTHONPATH=/app
 COPY ./app/data_import/requirements.txt /app/requirements.txt
 COPY ./app/data_import/data.xlsx /app/data.xlsx
-RUN pip install --no-cache-dir -r /app/requirements.txt
+RUN pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org --no-cache-dir -r /app/requirements.txt
 
 COPY ./app /app
 CMD ["python", "/app/data_import/import_data.py"]

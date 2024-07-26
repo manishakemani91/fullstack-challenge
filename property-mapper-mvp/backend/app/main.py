@@ -1,6 +1,8 @@
 import os
 from fastapi import FastAPI, APIRouter, Request
 from fastapi_sqlalchemy import DBSessionMiddleware
+from fastapi.middleware.cors import CORSMiddleware
+
 from dotenv import load_dotenv
 
 from app.property_mapper import property_mapper_router
@@ -13,6 +15,15 @@ root_router = APIRouter()
 
 app = FastAPI()
 app.add_middleware(DBSessionMiddleware, db_url=os.environ["DATABASE_URL"])
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(main_router)
 app.include_router(property_mapper_router)

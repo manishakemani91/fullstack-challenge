@@ -10,7 +10,6 @@ Property Mapper Backend
 - SQLAlchemy: For ORM.
 - Pydantic: For Typing or Serialization.
 - Pytests: For TDD or Unit Testing.
-- Poetry: Python dependency management and packaging made easy. (Better than pip)
 - Docker & docker-compose : For Virtualization.
 - postgresSQL: Database.
 - PgAdmin: To interact with the Postgres database sessions.
@@ -29,6 +28,7 @@ PGADMIN_PASSWORD=
 ```
 
 ## Step 2
+Create docker-compose.yml with containers defined(take reference of docker-compose on root level of directory) and run containers using command
 ```
 docker-compose up
 ```

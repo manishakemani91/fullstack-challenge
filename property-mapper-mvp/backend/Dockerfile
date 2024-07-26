@@ -4,23 +4,16 @@ FROM python:3.10-slim-bullseye
 RUN apt-get update \
   && apt-get -y install libpq-dev gcc curl procps net-tools tini \
   && apt-get -y clean \
-  && rm -rf /var/lib/apt/lists/* \
-  && pip install gunicorn
+  && rm -rf /var/lib/apt/lists/*
 
-ENV POETRY_HOME=/tmp/poetry
-RUN curl -sSL https://install.python-poetry.org/ | python3 -
-ENV PATH=$POETRY_HOME/bin:$PATH
-ENV PYTHONFAULTHANDLER=1
-ENV PYTHONUNBUFFERED=1
+COPY requirements.txt ./requirements.txt
+RUN pip install gunicorn --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org
+RUN pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org --no-cache-dir -r ./requirements.txt
 
 WORKDIR /app
 COPY . .
 COPY alembic.ini /app/alembic.ini
-#COPY ./app .
 
 RUN ls -l
-
-RUN poetry config virtualenvs.create false \
-  && poetry install --only main
 
 EXPOSE 8000

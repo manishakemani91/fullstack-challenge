@@ -5,28 +5,17 @@ from app.main import app
 from sqlalchemy.orm import Session
 from unittest.mock import MagicMock, patch
 from dotenv import load_dotenv
-from app.core.db.mock_session import  test_client
+from app.core.db.mock_session import engine, test_client
 
 load_dotenv(".env")
 
 # It drops everything from the db and then recreate each time tests runs
-# Base.metadata.drop_all(bind=engine)
-# Base.metadata.create_all(bind=engine)
-
-SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
-
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base.metadata.drop_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 client = test_client()
 
-# @pytest.fixture
-# def mock_get_db():
-#     """Fixture to mock the get_db dependency"""
-#     mock_db = MagicMock(spec=Session)
-#     yield mock_db
-#     mock_db.close()
-
+@pytest.fixture
 def test_bad_request_field():
     response = client.get("/autocomplete", params={"query": "test", "field": "invalid_field"})
     assert response.status_code == 400
