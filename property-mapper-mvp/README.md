@@ -56,12 +56,12 @@ Ensure that you have the following installed on your system:
 Backend
 
     Navigate to the backend directory.
-    Refer to the [README.md](https://github.com/manishakemani91/fullstack-challenge/blob/master/property-mapper-mvp/backend/README.md) file in the backend directory for setup and running instructions.
+    Refer to the [README](https://github.com/manishakemani91/fullstack-challenge/blob/master/property-mapper-mvp/backend/README.md) file in the backend directory for setup and running instructions.
 
 Frontend
 
     Navigate to the frontend directory.
-    Refer to the [README.md](https://github.com/manishakemani91/fullstack-challenge/blob/master/property-mapper-mvp/frontend/README.md) file in the frontend directory for setup and running instructions.
+    Refer to the [README](https://github.com/manishakemani91/fullstack-challenge/blob/master/property-mapper-mvp/frontend/README.md) file in the frontend directory for setup and running instructions.
 
 ## Directory Structure
 
