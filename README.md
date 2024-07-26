@@ -51,3 +51,5 @@ Design and implement a system that enables users to search for properties in the
     - **Optimization**: Propose at least one optimization that can help the application perform better under increased data loads.
     - **Additional Feature**: Propose a feature you believe would enhance the user's experience while searching for properties.
 
+## Solution
+Here is a brief description of my solution and approach to solving the problem.
