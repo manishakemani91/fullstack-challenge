@@ -53,13 +53,13 @@ Ensure that you have the following installed on your system:
 
     For development purposes, you can run the backend and frontend services separately. Follow the instructions in their respective README.md files for local setup.
 
-Backend
-
+   **Backend**
+    - 
     Navigate to the backend directory.
     Refer to the [README](https://github.com/manishakemani91/fullstack-challenge/blob/master/property-mapper-mvp/backend/README.md) file in the backend directory for setup and running instructions.
 
-Frontend
-
+   **Frontend**
+    -
     Navigate to the frontend directory.
     Refer to the [README](https://github.com/manishakemani91/fullstack-challenge/blob/master/property-mapper-mvp/frontend/README.md) file in the frontend directory for setup and running instructions.
 
