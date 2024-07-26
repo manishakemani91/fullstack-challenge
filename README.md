@@ -52,4 +52,4 @@ Design and implement a system that enables users to search for properties in the
     - **Additional Feature**: Propose a feature you believe would enhance the user's experience while searching for properties.
 
 ## Solution
-Here is a brief description of my solution and approach to solving the problem.
+Here is a brief description of my solution and approach to solving the problem. [Link](https://github.com/manishakemani91/fullstack-challenge/tree/master/property-mapper-mvp)
